@@ -1,8 +1,8 @@
 import socket
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(("data.pr4e.org", 80))
-cmd = 'GET http://data.pr4e.org/page1.htm HTTP/1.0\r\n\r\n'.encode()
+mysock.connect(("localhost", 90))
+cmd = 'GET http://localhost:9000/something HTTP/1.0\r\n\r\n'.encode()
 mysock.send(cmd)
 
 while True: # Loop is necessary since how much data we will get from the server
